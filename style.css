@@ -23,7 +23,6 @@ body{
 /************* NAVBAR *************/
 nav {
     margin: 1rem 2rem;
-    position: relative;
 }
 nav ul a{
     text-decoration: none;
@@ -80,20 +79,32 @@ nav ul a:hover, .dropbtn:hover, .dropbtn:focus, .dropdown-content a:hover{
 .dropdown-content {
     display: none;
     margin-top: 1rem;
-    padding: .5rem 0;
+    padding: .8rem 1.2rem;
     position: absolute;
     background-color: hsl(0, 0%, 98%);
     border-radius: 15px;
-    min-width: 160px;
+    width: max-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 #featuresDropdown{
     right: 0;
 }
+#featuresDropdown a {
+    position: relative;
+    text-align: left;
+    padding-left: 2.2rem;
+}
+#featuresDropdown img {
+    position: absolute;
+    left: 10px;
+}
 
-#companyDropdown{
+#companyDropdown {
     left: 0;
+}
+#companyDropdown a {
+    text-align: left;
 }
 .dropdown-content a {
     color: inherit;
@@ -177,10 +188,14 @@ aside img{
 }
 
 /************* MOBILE STYLES *************/
-#btn-mobile {
+.btn-mobile {
     display: none;
     height: fit-content;
     padding: .2rem;
+}
+.dark-bg {
+    background-color: hsla(0, 0%, 8%, 0.7);
+    
 }
 
 
@@ -188,6 +203,7 @@ aside img{
 @media (max-width: 375px) {
     .btn-mobile {
         display: none;
+        z-index: 2;
     }
     .btn-active {
         display: block;
@@ -200,6 +216,39 @@ aside img{
     }
     .menu-container {
         display: none;
+        background-color: hsl(0, 0%, 98%);
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        width: 65%;
+        height: 100vh;
+        justify-content: start;
+        row-gap: 2rem;
+        
+    }
+    
+    .primary-nav-menu {
+        align-items: flex-start;
+        margin-left: 1rem;
+        row-gap: 1rem;
+        margin-top: 50px;
+        flex-grow: 0;
+    }
+    .secondary-nav-menu {
+        row-gap: 1rem;
+    }
+    .dropbtn {
+        margin-left: 1rem;
+    }
+    .secondary-nav-menu li:last-child {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .dropdown-content {
+        position: relative;
+        box-shadow: none;
     }
     .active {
         display: flex;
