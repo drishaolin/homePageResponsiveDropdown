@@ -41,21 +41,21 @@ nav ul a:hover, .dropbtn:hover, .dropbtn:focus, .dropdown-content a:hover{
 .nav-container {
     display: flex;
 }
-.nav-items{
+.nav-menu{
     list-style-type: none;
     display: flex;
     align-items: center;
     column-gap: 2rem;
 }
-.primary-nav-items {
+.primary-nav-menu {
     flex-grow: 1;
 }
-.secondary-nav-items li:last-child {
+.secondary-nav-menu li:last-child {
     padding: .8rem 0;
     border: 1px solid hsl(0, 0%, 41%);
     border-radius: 15px;
 }
-.secondary-nav-items li:last-child:hover {
+.secondary-nav-menu li:last-child:hover {
     border: 2px solid hsl(0, 0%, 8%);
 }
 /************* DROPDOWN *************/
@@ -100,7 +100,8 @@ nav ul a:hover, .dropbtn:hover, .dropbtn:focus, .dropdown-content a:hover{
 
 /************* MAIN STYLES *************/
 main {
-    width: 80%;
+    width: 85%;
+    height: 85vh;
     margin: auto;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -129,7 +130,7 @@ section {
     color: hsl(0, 0%, 98%);
     background-color: hsl(0, 0%, 8%);
     border-radius: 15px;
-    padding: 1.2rem 1.5rem;
+    padding: 1rem 1.5rem;
 }
 #learn-more:hover {
     color: hsl(0, 0%, 8%);
@@ -138,6 +139,10 @@ section {
 }
 aside {
     grid-area: aside-img;
+    background-image: url("assets/img/image-hero-desktop.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5rem;
 }
 aside img{
     display: block;
@@ -160,11 +165,59 @@ aside img{
     font-size: 14px;
     color: hsl(0, 0%, 98%);
     background-color: hsl(0, 0%, 8%);
-    width: 100vh;
 }
 .credits a {
     color: hsl(0, 0%, 41%);
 }
 
+/************* MOBILE STYLES *************/
+#btn-mobile {
+    display: none;
+    height: fit-content;
+    padding: .2rem;
+}
+
+
+/************* RESPONSIVE *************/
+@media (max-width: 375px) {
+    #btn-mobile {
+        display: block;
+    }
+    .nav-container {
+        justify-content: space-between;
+    }
+    .nav-menu {
+        display: none;
+    }
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: auto;
+    }
+    aside {
+        height: 50vh;
+        margin: 0;
+        background-image: url("assets/img/image-hero-mobile.png");
+    }
+    .section-title {
+        margin: 1rem auto;
+        font-size: 2.2rem;
+    }
+    .section-text {
+        width: 90%;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+    #learn-more {
+        margin: 1.5rem auto;
+    }
+    .credits {
+        font-size: 10px;
+    }
+
+
+}
 
 
