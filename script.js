@@ -18,16 +18,26 @@ function closeDropdown(event) {
     }
   }
 
-  const btnMobile = document.getElementById("btn-mobile");
-  function toggleMenu() {
-    const nav = document.getElementsByClassName("nav-menu");
-    console.log(nav);
-    for (let i = 0; i < nav.length; i++) {
-      let toggleNav = nav[i];
-      toggleNav.classList.toggle("active");
-      
-    }
+const btnMobile = document.getElementsByClassName("btn-mobile");
+for (let i = 0; i < btnMobile.length; i++) {
+  let btn = btnMobile[i];
+  btn.addEventListener("click", toggleMenu);
+}
 
+function toggleMenu() {
+  const nav = document.getElementsByClassName("nav-menu");
+  for (let i = 0; i < nav.length; i++) {
+    let toggleNav = nav[i];
+    toggleNav.classList.toggle("active");
+    
   }
+  for (let i = 0; i < btnMobile.length; i++) {
+    let btn = btnMobile[i];
+    btn.classList.toggle("btn-active");
+    
+  }
+  const menu = document.querySelector(".menu-container");
+  menu.classList.toggle("active");
+    
+}
 
-  btnMobile.addEventListener("click", toggleMenu);

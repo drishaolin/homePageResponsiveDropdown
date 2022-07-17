@@ -20,39 +20,45 @@
             <nav class="text-gray-500">
                 <div class="nav-container">
                 <a href="" id="logo"><img src="assets/img/logo.svg" alt="" /></a>
-                <div id="btn-mobile">
+                <div class="btn-mobile btn-active">
                     <img src="assets/img/icon-menu.svg" alt="menu icon">
                 </div>
-                <ul class="nav-menu primary-nav-menu">
-                    <li class="dropdown">
-                        <button class="dropbtn" onclick="toggleDropdown('featuresDropdown')"
-                            >Features <img src="assets/img/icon-arrow-down.svg" alt="arrow down" />
-                        </button>
-                        <div id="featuresDropdown" class="dropdown-content" >
-                            <a href="#"> <img src="assets/img/icon-todo.svg" alt="todo icon"> Todo List</a>
-                            <a href="#"><img src="assets/img/icon-calendar.svg" alt="todo icon"> Calendar</a>
-                            <a href="#"><img src="assets/img/icon-reminders.svg" alt="todo icon"> Reminders</a>
-                            <a href="#"><img src="assets/img/icon-planning.svg" alt="todo icon"> Planning</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button class="dropbtn" onclick="toggleDropdown('companyDropdown')"
-                            >Company <img src="assets/img/icon-arrow-down.svg" alt="arrow down" />
-                        </button>
-                        <div id="companyDropdown" class="dropdown-content" >
-                            <a href="#">History</a>
-                            <a href="#">Our Team</a>
-                            <a href="#">Blog</a>
-                        </div>
-                    </li>
-                    <li><a href="">Careers</a></li>
-                    <li><a href="">About</a></li>
-                </ul>
+                <div class="btn-mobile">
+                    <img src="assets/img/icon-close-menu.svg" alt="menu close icon">
+                </div>
+                <div class="menu-container">
+                    <ul class="nav-menu primary-nav-menu">
+                        <li class="dropdown">
+                            <button class="dropbtn" onclick="toggleDropdown('featuresDropdown')"
+                                >Features <img src="assets/img/icon-arrow-down.svg" alt="arrow down" />
+                            </button>
+                            <div id="featuresDropdown" class="dropdown-content" >
+                                <a href="#"> <img src="assets/img/icon-todo.svg" alt="todo icon"> Todo List</a>
+                                <a href="#"><img src="assets/img/icon-calendar.svg" alt="todo icon"> Calendar</a>
+                                <a href="#"><img src="assets/img/icon-reminders.svg" alt="todo icon"> Reminders</a>
+                                <a href="#"><img src="assets/img/icon-planning.svg" alt="todo icon"> Planning</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button class="dropbtn" onclick="toggleDropdown('companyDropdown')"
+                                >Company <img src="assets/img/icon-arrow-down.svg" alt="arrow down" />
+                            </button>
+                            <div id="companyDropdown" class="dropdown-content" >
+                                <a href="#">History</a>
+                                <a href="#">Our Team</a>
+                                <a href="#">Blog</a>
+                            </div>
+                        </li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
 
-                <ul class="nav-menu secondary-nav-menu">
-                    <li><a href="">Login</a></li>
-                    <li><a href="">Register</a></li>
-                </ul>
+                    <ul class="nav-menu secondary-nav-menu">
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Register</a></li>
+                    </ul>
+                </div>
+               
                 </div>
             </nav>
         </header>

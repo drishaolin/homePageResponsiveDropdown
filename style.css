@@ -23,6 +23,7 @@ body{
 /************* NAVBAR *************/
 nav {
     margin: 1rem 2rem;
+    position: relative;
 }
 nav ul a{
     text-decoration: none;
@@ -40,6 +41,11 @@ nav ul a:hover, .dropbtn:hover, .dropbtn:focus, .dropdown-content a:hover{
 }
 .nav-container {
     display: flex;
+}
+.menu-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 .nav-menu{
     list-style-type: none;
@@ -180,7 +186,10 @@ aside img{
 
 /************* RESPONSIVE *************/
 @media (max-width: 375px) {
-    #btn-mobile {
+    .btn-mobile {
+        display: none;
+    }
+    .btn-active {
         display: block;
     }
     .nav-container {
@@ -188,6 +197,13 @@ aside img{
     }
     .nav-menu {
         display: none;
+    }
+    .menu-container {
+        display: none;
+    }
+    .active {
+        display: flex;
+        flex-direction: column;
     }
     main {
         display: flex;
