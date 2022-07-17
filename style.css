@@ -7,6 +7,7 @@
 body{
     background-color: hsl(0, 0%, 98%);
     color: hsl(0, 0%, 41%);
+    font-size: 18px;
     font-weight: 500;
 }
 .font-light {
@@ -21,10 +22,11 @@ body{
 }
 /************* NAVBAR *************/
 nav {
-    margin: 2rem;;
+    margin: 1rem 2rem;
 }
 nav ul a{
     text-decoration: none;
+    font-size: 16px;
     padding: .8rem 1rem;
 }
 nav ul a:hover, .dropbtn:hover, .dropbtn:focus, .dropdown-content a:hover{
@@ -51,7 +53,7 @@ nav ul a:hover, .dropbtn:hover, .dropbtn:focus, .dropdown-content a:hover{
 .secondary-nav-items li:last-child {
     padding: .8rem 0;
     border: 1px solid hsl(0, 0%, 41%);
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .secondary-nav-items li:last-child:hover {
     border: 2px solid hsl(0, 0%, 8%);
@@ -75,7 +77,7 @@ nav ul a:hover, .dropbtn:hover, .dropbtn:focus, .dropdown-content a:hover{
     padding: .5rem 0;
     position: absolute;
     background-color: hsl(0, 0%, 98%);
-    border-radius: 10px;
+    border-radius: 15px;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -95,4 +97,74 @@ nav ul a:hover, .dropbtn:hover, .dropbtn:focus, .dropdown-content a:hover{
     display: block;
 }
 .show-dropdown{display:block;}
+
+/************* MAIN STYLES *************/
+main {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    'main-section aside-img';
+
+}
+section {
+    grid-area: main-section;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-title {
+    font-size: 4.8rem;
+    color: hsl(0, 0%, 8%);
+    margin-top: 5rem;
+}
+.section-text {
+    width: 80%;
+    line-height: 1.5rem;
+}
+#learn-more {
+    width: fit-content;
+    font-size: inherit;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 15px;
+    padding: 1.2rem 1.5rem;
+}
+#learn-more:hover {
+    color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    cursor: pointer;
+}
+aside {
+    grid-area: aside-img;
+}
+aside img{
+    display: block;
+    height: 85vh;
+    margin-left: auto;
+    
+}
+.section-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+/************* PAGE FOOTER *************/
+.credits {
+    display: flex;
+    column-gap: 2rem;
+    justify-content: center;
+    margin-top: .4rem;
+    padding: .5rem 0;
+    font-size: 14px;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    width: 100vh;
+}
+.credits a {
+    color: hsl(0, 0%, 41%);
+}
+
+
 
