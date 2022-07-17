@@ -171,6 +171,9 @@ aside img{
     display: flex;
     justify-content: space-between;
 }
+.section-footer span {
+    text-align: center;
+}
 
 /************* PAGE FOOTER *************/
 .credits {
@@ -222,7 +225,7 @@ aside img{
         top: 0;
         z-index: 1;
         width: 65%;
-        height: 100vh;
+        height: 110vh;
         justify-content: start;
         row-gap: 2rem;
         
@@ -238,6 +241,10 @@ aside img{
     .secondary-nav-menu {
         row-gap: 1rem;
     }
+    .secondary-nav-menu a {
+        font-size: 14px;
+
+    }
     .dropbtn {
         margin-left: 1rem;
     }
@@ -249,6 +256,7 @@ aside img{
     .dropdown-content {
         position: relative;
         box-shadow: none;
+        margin-top: 0;
     }
     .active {
         display: flex;
@@ -277,6 +285,9 @@ aside img{
     }
     #learn-more {
         margin: 1.5rem auto;
+    }
+    .section-footer img {
+        width: 75%;
     }
     .credits {
         font-size: 10px;
