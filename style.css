@@ -196,9 +196,13 @@ aside img{
     height: fit-content;
     padding: .2rem;
 }
-.dark-bg {
+/* .dark-bg {
     background-color: hsla(0, 0%, 8%, 0.7);
     
+} */
+.close-menu {
+    display: none;
+    position: absolute;
 }
 
 
@@ -216,6 +220,16 @@ aside img{
     }
     .nav-menu {
         display: none;
+    }
+    .close-menu-active {
+        display: block;
+    }
+    .close-menu {
+        left: 0;
+        top: 0;
+        width: 35%;
+        height: 110vh;
+        background-color: hsla(0, 0%, 8%, 0.7);
     }
     .menu-container {
         display: none;
